@@ -97,10 +97,6 @@ async function checkWeather(city)
         {
             weatherIcon.src = "images/snow.png";
         }
-        else 
-        {
-        console.log("Unmatched weather type:", data.weather[0].main);
-        }
 
         document.querySelector(".weather").style.display = "block";
         document.querySelector(".error").style.display = "none";
