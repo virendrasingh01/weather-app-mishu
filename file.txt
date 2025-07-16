@@ -9,4 +9,4 @@ base app:
     - humidity (%)
 - displays an error message if city not found
 
-
+additional features:
