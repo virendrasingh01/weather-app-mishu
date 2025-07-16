@@ -76,6 +76,14 @@ async function checkWeather(city)
     {
         weatherIcon.src = "images/clear.png";
     }
+    else if(data.weather[0].main == "Snow")
+    {
+        weatherIcon.src = "images/snow.png";
+    }
+    else 
+    {
+    console.log("Unmatched weather type:", data.weather[0].main);
+    }
 }
 
 searchBtn.addEventListener("click", (e)=>{
