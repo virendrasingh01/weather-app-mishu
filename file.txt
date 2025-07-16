@@ -1,0 +1,12 @@
+base app:
+- takes city as input
+    - typing city name 
+    - clicking on search icon
+- displays city specific weather data
+    - picture icon
+    - temperature (celsius)
+    - wind speed (km/h)
+    - humidity (%)
+- displays an error message if city not found
+
+
