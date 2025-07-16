@@ -10,3 +10,6 @@ base app:
 - displays an error message if city not found
 
 additional features:
+- temp: max/min/feels like
+- wind: direction + icons
+- precipitation:
