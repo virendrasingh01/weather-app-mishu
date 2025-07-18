@@ -159,3 +159,12 @@ body
     font-weight: 600;
 }
 
+/* max/min temps */
+.forecast-day p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+.forecast-day p strong {
+    color: #ffdf5f;
+}
+
