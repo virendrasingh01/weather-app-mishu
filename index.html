@@ -103,17 +103,12 @@ async function checkWeather(city)
         document.querySelector(".error").style.display = "none";
 
         // retrieving lat and long for city
-        const cityUrl = "https://api.openweathermap.org/data/2.5/weather?q=&appid=$7d212c76a8e76b6148a810b2da6106bb";
-        const cityResponse = await fetch(cityUrl);
-        const cityData = await cityResponse.json();
-
-        const lat = cityData.coord.lat;
-        const lon = cityData.coord.lon;
+        const lat = data.coord.lat;
+        const lon = data.coord.lon;
+        console.log("Lat:", lat, "Lon:", lon);
 
         // retrieving forecast data
-        const forecastUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=$lat&lon=$lon&exclude=hourly,minutely,current,alerts&units=metric&appid=$7d212c76a8e76b6148a810b2da6106bb`;
-        //const forecastResponse = await fetch(forecastUrl);
-        //const forecastData = await forecastResponse.json();
+        const forecastUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely,current,alerts&units=metric&appid=${apiKey}`;
 
         // checking forecast data
         console.log("Forecast URL:", forecastUrl);
