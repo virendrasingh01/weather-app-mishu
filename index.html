@@ -35,14 +35,12 @@
                 </div>
             </div>
         </div>
-            <!-- forecast -->    
-        <div class="forecast"></div>
-        <!-- titling forecast -->
-        <div class="forecast-section">
-            <h2>7-Day Forecast</h2>
-        <div class="forecast"></div>
     </div>
-</div>
+    <!-- forecast -->    
+    <div class="forecast"></div>
+    <!-- titling forecast -->
+     <div class="forecast-section">
+    <h2>7-Day Forecast</h2>
 </div>
 
 <script>
@@ -128,6 +126,7 @@ async function checkWeather(city)
         
         // clear old forecast
         forecastContainer.innerHTML = ""; 
+        document.querySelector(".forecast-section").style.display = "block";
 
         // loop to display week data
         forecastData.daily.slice(0, 7).forEach((day, index) => {
