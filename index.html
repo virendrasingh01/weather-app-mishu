@@ -65,6 +65,8 @@ async function checkWeather(city)
     {   
         document.querySelector(".error").style.display = "block";
         document.querySelector(".weather").style.display = "none";
+        document.querySelector(".forecast-section").style.display = "none";
+
     }
     
     // else
@@ -78,7 +80,9 @@ async function checkWeather(city)
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
+        // displaying elements
         document.querySelector(".weather").style.display = "block";
+        document.querySelector(".forecast-section").style.display = "block";
 
         // updating images
         if(data.weather[0].main == "Clouds")
