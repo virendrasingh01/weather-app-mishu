@@ -9,11 +9,12 @@ base app:
     - humidity (%)
 - displays an error message if city not found
 
-additional features:
+additional features ideas:
 - temp: max/min/feels like
 - wind: direction + icons
 - precipitation:
 
 FEATURES ADDED:
 - 7-day forecast
+- feels like temp
 
