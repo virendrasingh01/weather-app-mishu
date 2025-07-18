@@ -181,5 +181,11 @@ body
 }
 
 /* precipitation */
+.details 
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
 
 
