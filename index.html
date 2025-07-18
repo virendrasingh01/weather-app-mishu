@@ -165,13 +165,20 @@ async function checkWeather(city)
     }
 }
 
-// different cities 
+// different cities by pressing search icon
 searchBtn.addEventListener("click", (e)=>{
     e.preventDefault();
     checkWeather(searchBox.value);
 }
 )
 
+// search for a city using enter key
+searchBox.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        checkWeather(searchBox.value);
+    }
+});
 
 </script>
 
