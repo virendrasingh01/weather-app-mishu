@@ -17,4 +17,5 @@ additional features ideas:
 FEATURES ADDED:
 - 7-day forecast
 - feels like temp
+- enter key functionality
 
