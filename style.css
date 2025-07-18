@@ -172,8 +172,10 @@ body
 /* feels like */
 
 .feels-like {
-    font-size: 16px;
-    color: #ffffffcc;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #f0f0f0;
+    font-weight: 500;
     font-style: italic;
 }
 
