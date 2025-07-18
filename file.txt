@@ -13,3 +13,7 @@ additional features:
 - temp: max/min/feels like
 - wind: direction + icons
 - precipitation:
+
+FEATURES ADDED:
+- 7-day forecast
+
