@@ -36,6 +36,8 @@
             </div>
         </div>
     </div>
+    <!-- forecast -->    
+    <div class="forecast"></div>
 </div>
 
 <script>
@@ -115,6 +117,32 @@ async function checkWeather(city)
         const forecastResponse = await fetch(forecastUrl);
         const forecastData = await forecastResponse.json();
         console.log("Forecast data:", forecastData);
+
+        // displaying forecast
+        const forecastContainer = document.querySelector(".forecast");
+        
+        // clear old forecast
+        forecastContainer.innerHTML = ""; 
+
+        // loop to display week data
+        forecastData.daily.slice(0, 7).forEach((day, index) => {
+            // convert UNIX to JS date
+            const date = new Date(day.dt * 1000); 
+            // short - eg. mon
+            const dayName = date.toLocaleDateString("en-GB", { weekday: "short" }); 
+
+            const icon = day.weather[0].icon;
+            const temp = Math.round(day.temp.day);
+
+            // add display to html
+            forecastContainer.innerHTML += `
+                <div class="forecast-day">
+                    <p>${dayName}</p>
+                    <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${day.weather[0].description}">
+                    <p>${temp}°C</p>
+                </div>
+            `;
+        });
 
     }
 }
