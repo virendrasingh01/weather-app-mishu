@@ -121,6 +121,16 @@ const lat = cityData.coord.lat;
 const lon = cityData.coord.lon;
 
 // retrieving forecast data
+const forecastUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=$lat&lon=$lon&exclude=hourly,minutely,current,alerts&units=metric&appid=$7d212c76a8e76b6148a810b2da6106bb`;
+//const forecastResponse = await fetch(forecastUrl);
+//const forecastData = await forecastResponse.json();
+
+// checking forecast data
+console.log("Forecast URL:", forecastUrl);
+const forecastResponse = await fetch(forecastUrl);
+const forecastData = await forecastResponse.json();
+console.log("Forecast data:", forecastData);
+
 
 </script>
 
